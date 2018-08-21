@@ -1,0 +1,10 @@
+<h1>AirFable</h1>
+
+<h2></h2>
+
+<ul>
+  <!-- <%= @records %> -->
+  <% @records.each do |r| %>
+    <li><%= r["fields"]["Name"] + " - " + r["fields"]["Title"]  %></li>
+  <%- end %>
+</ul>
