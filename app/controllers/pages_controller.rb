@@ -18,7 +18,7 @@ class PagesController < ApplicationController
   def index
     # @client = Airtable::Client.new(ENV['AIRTABLE_API_KEY'])
     @table = get
-    @records= @table['records'].sort_by { |hsh| (hsh["fields"]["Name"]).length }
+    @records= @table['records']
     @bill = @records.first
 
   end
